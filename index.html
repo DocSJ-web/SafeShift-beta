@@ -13028,33 +13028,33 @@ function SafeShift() {
     s2: "#0f1520",
     s3: "#131b2a",
     s4: "#172133",
-    bd: "#1a2636",
-    bd2: "#223044",
-    hi: "#f0f4f8",
-    t0: "#b8c8d8",
-    t1: "#5e7488",
-    t2: "#384d5f",
-    r: "#c0302a",
-    rb: "rgba(192,48,42,.08)",
-    rbd: "rgba(192,48,42,.24)",
-    a: "#6e90aa",
-    ab: "rgba(110,144,170,.11)",
-    abd: "rgba(110,144,170,.30)",
-    p: "#2563a8",
-    pb: "rgba(37,99,168,.12)",
-    pbd: "rgba(37,99,168,.34)",
-    v: "#2563a8",
-    vb: "rgba(37,99,168,.10)",
-    vbd: "rgba(37,99,168,.28)",
-    g: "#1a5c3a",
-    gb: "rgba(26,92,58,.10)",
-    gbd: "rgba(26,92,58,.24)",
-    w: "#6e90aa",
-    wb: "rgba(110,144,170,.09)",
-    wbd: "rgba(110,144,170,.26)",
-    ex: "#145850",
-    exb: "rgba(20,88,80,.10)",
-    exbd: "rgba(20,88,80,.26)",
+    bd: "#1e2e42",
+    bd2: "#2a4060",
+    hi: "#f0f6ff",
+    t0: "#d8e8f4",
+    t1: "#8ab4d0",
+    t2: "#5a7a96",
+    r: "#ff4040",
+    rb: "rgba(255,64,64,.10)",
+    rbd: "rgba(255,64,64,.30)",
+    a: "#ffaa44",
+    ab: "rgba(255,170,68,.13)",
+    abd: "rgba(255,170,68,.35)",
+    p: "#4d9fff",
+    pb: "rgba(77,159,255,.14)",
+    pbd: "rgba(77,159,255,.38)",
+    v: "#4d9fff",
+    vb: "rgba(77,159,255,.12)",
+    vbd: "rgba(77,159,255,.32)",
+    g: "#22c55e",
+    gb: "rgba(34,197,94,.12)",
+    gbd: "rgba(34,197,94,.32)",
+    w: "#f59e0b",
+    wb: "rgba(245,158,11,.12)",
+    wbd: "rgba(245,158,11,.32)",
+    ex: "#2dd4bf",
+    exb: "rgba(45,212,191,.12)",
+    exbd: "rgba(45,212,191,.30)",
     M: "'IBM Plex Mono','Courier New',monospace",
     B: "-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif",
     H: 72,
@@ -15987,20 +15987,32 @@ function SafeShift() {
       justifyContent: "space-between",
       alignItems: "center"
     } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8 } }, /* @__PURE__ */ React.createElement(
-      "span",
+      "button",
       {
-        style: {
-          fontFamily: K.M,
-          fontSize: 14,
-          fontWeight: 700,
-          color: K.hi,
-          cursor: "pointer",
-          letterSpacing: "2px"
+        onClick: () => {
+          setFachbereich(null);
+          setSym(null);
+          setView("home");
         },
-        onClick: () => setView2("about")
+        style: {
+          height: 38,
+          padding: "0 14px",
+          background: "transparent",
+          border: `1px solid ${K.bd}`,
+          borderRadius: 6,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          fontSize: 13,
+          fontWeight: 700,
+          color: K.t0,
+          flexShrink: 0,
+          whiteSpace: "nowrap"
+        }
       },
-      "SAFESHIFT"
-    ), /* @__PURE__ */ React.createElement("span", { style: { fontSize: 9, fontFamily: K.M, letterSpacing: "2px", color: K.p, fontWeight: 600, marginTop: 1 } }, fachbereich === "intensiv" ? "INTENSIVMEDIZIN" : fachbereich === "anaesthesie" ? "AN\xC4STHESIE" : "NOTFALLMEDIZIN"), clinic !== "default" && CLINIC_SOPS[clinic] && /* @__PURE__ */ React.createElement("span", { style: {
+      "\u2190 Zur\xFCck"
+    ), clinic !== "default" && CLINIC_SOPS[clinic] && /* @__PURE__ */ React.createElement("span", { style: {
       fontSize: 9,
       fontFamily: K.M,
       fontWeight: 700,
@@ -16056,23 +16068,20 @@ function SafeShift() {
         },
         title: "Fachbereich wechseln",
         style: {
+          width: 36,
           height: 36,
-          padding: "0 10px",
           background: "transparent",
           border: `1px solid ${K.bd}`,
           borderRadius: 6,
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
-          gap: 5,
-          fontSize: 12,
-          color: K.t1,
-          fontFamily: K.M,
-          letterSpacing: "0.5px"
+          justifyContent: "center",
+          fontSize: 16,
+          color: K.t1
         }
       },
-      /* @__PURE__ */ React.createElement("span", { style: { fontSize: 14 } }, "\u2302"),
-      /* @__PURE__ */ React.createElement("span", { style: { fontSize: 10, letterSpacing: "1px" } }, "WECHSELN")
+      "\u2302"
     ), /* @__PURE__ */ React.createElement(
       "button",
       {
@@ -16160,39 +16169,7 @@ function SafeShift() {
         marginBottom: 5
       } }, "ABCDE-SCHEMA \xB7 ERSTEINSCH\xC4TZUNG"), /* @__PURE__ */ React.createElement("div", { style: { fontSize: 20, fontWeight: 700, color: K.hi, letterSpacing: "-0.03em" } }, "Notfall starten")),
       /* @__PURE__ */ React.createElement("span", { style: { color: K.t2, fontSize: 18, fontFamily: K.M, flexShrink: 0, opacity: 0.5 } }, "\u2192")
-    ), /* @__PURE__ */ React.createElement("div", { style: {
-      background: fachbereich === "intensiv" ? "rgba(77,159,255,.08)" : fachbereich === "anaesthesie" ? "rgba(167,139,250,.08)" : "rgba(255,59,59,.08)",
-      borderBottom: `1px solid ${fachbereich === "intensiv" ? "#4d9fff" : fachbereich === "anaesthesie" ? "#a78bfa" : "#ff3b3b"}44`,
-      padding: "8px 20px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between"
-    } }, /* @__PURE__ */ React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8 } }, /* @__PURE__ */ React.createElement("span", { style: { fontSize: 16 } }, fachbereich === "intensiv" ? "\u{1F3E5}" : fachbereich === "anaesthesie" ? "\u{1F489}" : "\u{1F6A8}"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { style: { fontSize: 9, color: K.t2, fontFamily: K.M, letterSpacing: "2px" } }, "AKTIVER BEREICH"), /* @__PURE__ */ React.createElement("div", { style: { fontSize: 13, fontWeight: 700, color: K.t0, marginTop: 1 } }, fachbereich === "intensiv" ? "Intensivmedizin" : fachbereich === "anaesthesie" ? "An\xE4sthesie" : "Notfallmedizin"))), /* @__PURE__ */ React.createElement(
-      "button",
-      {
-        onClick: () => {
-          setFachbereich(null);
-          setSym(null);
-          setView("home");
-        },
-        style: {
-          height: 36,
-          padding: "0 14px",
-          background: "transparent",
-          border: `1px solid ${K.bd}`,
-          borderRadius: 6,
-          cursor: "pointer",
-          fontSize: 12,
-          color: K.t1,
-          fontFamily: K.M,
-          letterSpacing: "1px",
-          display: "flex",
-          alignItems: "center",
-          gap: 6
-        }
-      },
-      "\u2190 ZUR\xDCCK"
-    )), recents.length > 0 && /* @__PURE__ */ React.createElement("div", { style: { padding: "12px 20px 0" } }, /* @__PURE__ */ React.createElement("div", { style: {
+    ), recents.length > 0 && /* @__PURE__ */ React.createElement("div", { style: { padding: "12px 20px 0" } }, /* @__PURE__ */ React.createElement("div", { style: {
       fontSize: 9,
       fontWeight: 700,
       color: K.t2,
